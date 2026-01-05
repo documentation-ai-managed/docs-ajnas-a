@@ -1,0 +1,147 @@
+---
+title: Getting Started with Ajnas A
+description: Quickly set up your account and take the first steps to leverage Winmaxconnect's digital marketing services for immediate online growth.
+---
+
+## Prerequisites
+
+Before diving in, ensure you have the following ready:
+
+<Callout kind="info">
+
+- A business website or online presence to optimize
+- Access to your current marketing data (e.g., Google Analytics)
+- Business goals defined (e.g., increase traffic by `>30%`)
+
+Winmaxconnect delivers `350%` ROI for over `500` UAE businesses through SEO, SMO, and PPC.
+
+</Callout>
+
+## Sign Up for Free Consultation
+
+Start your journey with Ajnas A by requesting a free consultation. This connects you with experts for personalized advice.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="external-link">
+    Navigate to `https://dashboard.example.com/signup`.
+  </Step>
+  <Step title="Fill Consultation Form" icon="edit-3">
+    Provide your business details, website URL, and goals.
+  </Step>
+  <Step title="Schedule Call" icon="calendar">
+    Select a time slot. You'll receive a confirmation email within minutes.
+  </Step>
+</Steps>
+
+## Account Creation and Onboarding
+
+After consultation, create your account to access the full platform.
+
+<Tabs>
+  <Tab title="Web" icon="globe">
+    <Steps>
+      <Step title="Register">
+        Click **Sign Up** and enter your email, password, and company name.
+      </Step>
+      <Step title="Verify Email">
+        Check your inbox for the verification link.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Mobile App" icon="smartphone">
+    Download the Ajnas A app from App Store or Google Play, then follow the on-screen prompts.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+
+Onboarding takes `<5` minutes. Upload your site map during this step for faster assessment.
+
+</Callout>
+
+## Initial Business Needs Assessment
+
+During onboarding, Ajnas A analyzes your needs automatically.
+
+<Columns cols={3}>
+  <Card title="SEO Audit" icon="search" href="#seo-audit">
+    Scans for keywords and backlinks.
+  </Card>
+  <Card title="SMO Check" icon="share-2" href="#smo-check">
+    Reviews social profiles and engagement.
+  </Card>
+  <Card title="PPC Readiness" icon="trending-up" href="#ppc">
+    Evaluates ad account setup.
+  </Card>
+</Columns>
+
+## Set Up Your First Marketing Campaign
+
+Launch a PPC campaign as your first step. Use the dashboard to configure.
+
+<Steps>
+  <Step title="Select Campaign Type" icon="plus">
+    Choose **PPC** from the dashboard.
+  </Step>
+  <Step title="Configure Settings" icon="settings">
+    Define budget, targeting, and keywords. Here's a sample API call to create it programmatically:
+    
+    <CodeGroup tabs="cURL,JavaScript">
+      ```bash
+      curl -X POST https://api.example.com/v1/campaigns \
+        -H "Authorization: Bearer YOUR_API_KEY" \
+        -H "Content-Type: application/json" \
+        -d '{
+          "name": "First PPC Campaign",
+          "budget": 500,
+          "keywords": ["digital marketing dubai", "seo uae"]
+        }'
+      ```
+      ```javascript
+      const response = await fetch('https://api.example.com/v1/campaigns', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer YOUR_API_KEY',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: 'First PPC Campaign',
+          budget: 500,
+          keywords: ['digital marketing dubai', 'seo uae']
+        })
+      });
+      ```
+    </CodeGroup>
+  </Step>
+  <Step title="Launch and Monitor" icon="play">
+    Review preview, then hit **Launch**. Track ROI in real-time.
+  </Step>
+</Steps>
+
+## Dashboard Navigation
+
+Master the basics to manage your growth.
+
+<Expandable title="Key Sections" default-open="true">
+
+- **Overview**: See `ROI`, traffic, and conversions at a glance.
+- **Campaigns**: Manage SEO, SMO, PPC setups.
+- **Analytics**: Integrate with Google Analytics for deeper insights.
+- **Reports**: Download monthly performance PDFs.
+
+</Expandable>
+
+<Columns cols={2}>
+  <Card title="Next: Authentication" icon="shield" href="/authentication">
+    Secure your API access.
+  </Card>
+  <Card title="Explore Guides" icon="book-open" href="/introduction">
+    Dive into advanced SEO strategies.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+
+Congratulations! You're set up for `350%` ROI growth. Monitor your first campaign and book follow-up consultations.
+
+</Callout>

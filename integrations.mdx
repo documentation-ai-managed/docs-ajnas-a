@@ -1,0 +1,159 @@
+---
+title: Integrations and Partnerships with Ajnas A
+description: Learn how to connect Ajnas A with third-party tools and platforms to enhance your digital marketing efforts and streamline workflows.
+---
+
+## Overview
+
+Ajnas A integrates seamlessly with popular third-party tools to supercharge your digital marketing campaigns. You can connect analytics platforms, social media services, CRMs, and set up webhooks for real-time data flow. These integrations help you track performance, automate lead management, and sync data across your UAE-based operations. Explore the options below to build a connected ecosystem that drives your 350% ROI goals.
+
+<Callout kind="tip">
+  Start with Google Analytics for immediate insights, then expand to social and CRM tools as your campaigns scale.
+</Callout>
+
+## Key Integrations
+
+<Columns cols={3}>
+  <Card title="Analytics & Ads" icon="bar-chart-3" href="#google-analytics">
+    Track conversions and optimize PPC campaigns with Google services.
+  </Card>
+  <Card title="Social Media" icon="share-2" href="#social-media">
+    Automate SMO across Facebook, Instagram, and LinkedIn.
+  </Card>
+  <Card title="CRM & Webhooks" icon="zap" href="#crm-webhooks">
+    Sync leads and enable real-time notifications.
+  </Card>
+</Columns>
+
+## Google Analytics and Ads
+
+Connect Ajnas A to Google Analytics and Google Ads to monitor traffic sources and ad performance. This setup provides detailed reports on your SEO and PPC efforts.
+
+<Steps>
+  <Step title="Enable API Access" icon="settings">
+    In your Ajnas A dashboard, navigate to Integrations > Google. Generate an OAuth client ID from the Google Cloud Console.
+  </Step>
+  <Step title="Authorize Connection">
+    Paste your client ID and secret into Ajnas A. Complete the OAuth flow to grant access to Analytics and Ads data.
+  </Step>
+  <Step title="Verify Data Flow">
+    Run a test sync. Check the Ajnas A reports for imported metrics like sessions and conversions.
+  </Step>
+</Steps>
+
+```javascript
+// Example: Fetch Google Analytics data via Ajnas A API
+const response = await fetch('https://api.example.com/v1/integrations/google-analytics', {
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+});
+const data = await response.json();
+console.log(data.sessions);
+```
+
+## Social Media Integrations
+
+Ajnas A supports direct connections to major social platforms for streamlined SMO campaigns.
+
+<Tabs>
+  <Tab title="Facebook" icon="facebook">
+    Use Facebook Graph API to post updates and track engagement.
+
+    <ParamField header="Facebook-Access-Token" param-type="string" required="true">
+      Generate from Facebook Developers portal.
+    </ParamField>
+
+````javascript
+// Post to Facebook via Ajnas A
+await fetch('https://api.example.com/v1/social/facebook/post', {
+  method: 'POST',
+  headers: { 'Authorization': 'Bearer YOUR_API_KEY' },
+  body: JSON.stringify({
+    message: 'Boost your business with Ajnas A!',
+    page_id: 'your-page-id'
+  })
+});
+````
+  </Tab>
+  <Tab title="Instagram" icon="instagram">
+    Schedule posts and analyze stories performance.
+
+    ```javascript
+    // Instagram insights example
+    const insights = await fetch('https://api.example.com/v1/social/instagram/insights');
+    ```
+  </Tab>
+  <Tab title="LinkedIn" icon="linkedin">
+    Share professional content and manage connections.
+  </Tab>
+</Tabs>
+
+## CRM and Webhook Setups
+
+Link Ajnas A to CRMs like HubSpot or Salesforce for lead nurturing. Set up webhooks for instant data syncing.
+
+### CRM Linkage Example (HubSpot)
+
+<ParamField query="hubspot_api_key" param-type="string" required="true">
+  Your HubSpot private app key.
+</ParamField>
+
+<ParamField body="email" param-type="string" required="true">
+  Lead email for contact creation.
+</ParamField>
+
+### Webhook Configuration
+
+Create a webhook endpoint to receive real-time campaign events.
+
+<CodeGroup tabs="Node.js,Python">
+````javascript
+// Node.js webhook handler
+const express = require('express');
+const app = express();
+app.use(express.json());
+
+app.post('/webhook/ajnas-a', (req, res) => {
+  console.log('Lead data:', req.body.lead);
+  res.status(200).send('OK');
+});
+
+app.listen(3000);
+````
+````python
+# Python webhook with Flask
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route('/webhook/ajnas-a', methods=['POST'])
+def webhook():
+    data = request.json
+    print('Lead data:', data['lead'])
+    return 'OK', 200
+````
+</CodeGroup>
+
+Configure the webhook URL in Ajnas A dashboard: `https://your-webhook-url.com/webhook/ajnas-a`.
+
+## UAE Partner Ecosystems
+
+Ajnas A partners with leading UAE agencies and tools for localized growth.
+
+<ExpandableGroup>
+  <Expandable title="Dubai SEO Partners" default-open="true">
+    Collaborate with top Dubai firms for enhanced SEO. Access shared dashboards and joint reporting.
+  </Expandable>
+  <Expandable title="PPC Networks">
+    Integrate with UAE ad networks for targeted Performance Marketing.
+  </Expandable>
+  <Expandable title="Local CRMs">
+    Connect to regionally popular CRMs like Zoho adapted for UAE businesses.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="success">
+  All integrations are secure and compliant with UAE data regulations. Contact support for custom partnerships.
+</Callout>
